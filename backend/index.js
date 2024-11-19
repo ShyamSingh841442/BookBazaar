@@ -25,7 +25,7 @@ app.use("/api/auth", userRoutes)
 app.use("/api/admin", adminRoutes)
 
 async function main() {
-  await mongoose.connect(process.env.DB_URL);
+  await mongoose.connect(`mongodb+srv://shyamsingh841442:shyamsingh841442@cluster0.yzedt.mongodb.net/bookbazaar?retryWrites=true&w=majority&appName=Cluster0`);
   app.use("/", (req, res) => {
     res.send("Book Store Server is running!");
   });
